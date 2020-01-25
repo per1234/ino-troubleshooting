@@ -1,0 +1,8 @@
+title: Troubleshooting Guide For Arduino
+remote_theme: per1234/jekyll-theme-nothing
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
