@@ -155,12 +155,12 @@ Verify that you can now use your board before reinstalling any other packages vi
 
 
 ---
-#### `Multiple libraries found for`
-The "Multiple libraries found for" message has nothing to do with your problem. That's just some helpful information the Arduino IDE provides. Generally, you can safely ignore the "Multiple libraries found for" messages. The only time you need to pay attention to it is when the Arduino IDE picked a different library than the one you had intended.
+#### `Multiple libraries were found for`
+The "Multiple libraries were found for" message has nothing to do with your problem. That's just some helpful information the Arduino IDE provides. Generally, you can safely ignore the "Multiple libraries were found for" messages. The only time you need to pay attention to it is when the Arduino IDE picked a different library than the one you had intended.
 
 Scroll up the black console window at the bottom of the Arduino IDE window to see the real error message related to your problem.
 
-Note that there is a bug in Arduino IDE 1.8.10 that causes it to display "Multiple libraries found for" messages even when there were no multiple libraries. You'll know the legitimate "Multiple libraries found for" messages because they'll show the path to a library that was not used. The false "Multiple libraries found for" messages only show the path to the library that was used.
+Note that there is a bug in Arduino IDE 1.8.10 that causes it to display "Multiple libraries were found for" messages even when there were no multiple libraries. You'll know the legitimate "Multiple libraries were found for" messages because they'll show the path to a library that was not used. The false "Multiple libraries were found for" messages only show the path to the library that was used.
 
 
 ---

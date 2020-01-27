@@ -31,7 +31,7 @@ For Windows only:
 1. Close all Arduino IDE windows.
 1. Open the file `arduino.l4j.ini`, located in the Arduino IDE installation folder, in a text editor.
 1. Add this line:
-    ```
+    ```INI
     -Dawt.useSystemAAFontSettings=on
     ```
 1. Save the file

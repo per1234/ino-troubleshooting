@@ -24,7 +24,7 @@ First, we're going to do a dummy upload in the Arduino IDE in order to get it to
 1. **Sketch > Upload**
 1. Wait for the upload to fail.
 1. Scroll up the black console window at the bottom of the Arduino IDE window until you see the avrdude command that was generated for the upload. It will look something like this:
-    ```shell
+    ```Batchfile
     E:\Arduino\hardware\tools\avr\bin\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:C:\Users\per\AppData\Local\Temp\arduino_build_91864/sketch_jan22b.ino.hex:i
     ```
 1. Select the full text of the upload command.
@@ -33,16 +33,16 @@ First, we're going to do a dummy upload in the Arduino IDE in order to get it to
 Next, you need to modify the upload command to read the hex file out of your Arduino board:
 1. Start a text editor program.
 1. In the text editor window, press **Ctrl + V**. This will paste the command into the text editor. The end of the command will look something like this:
-    ```
+    ```Batchfile
     -D -Uflash:w:C:\Users\per\AppData\Local\Temp\arduino_build_91864/sketch_jan22b.ino.hex:i
     ```
     That is the part of the command that tells it to write.
 1. Replace that part of the command with [the command that tells AVRDUDE to read](https://www.nongnu.org/avrdude/user-manual/avrdude_4.html#Option-Descriptions):
-    ```
+    ```Batchfile
     -Uflash:r:readfile.hex:i
     ```
     That will cause the read file to be named "readfile.hex", which will be saved to whichever folder you run the command from. So now the full command looks something like this:
-    ```shell
+    ```Batchfile
     E:\Arduino\hardware\tools\avr\bin\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:r:readfile.hex:i
     ```
 1. If the paths in the command contain spaces, wrap the paths in quotes.
@@ -62,7 +62,7 @@ First, we're going to do a dummy upload in the Arduino IDE in order to get it to
 1. **Sketch > Upload**
 1. Wait for the upload to finish.
 1. Scroll up the black console window at the bottom of the Arduino IDE window until you see the avrdude command that was generated for the upload. It will look something like this:
-    ```shell
+    ```Batchfile
     E:\Arduino\hardware\tools\avr\bin\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:C:\Users\per\AppData\Local\Temp\arduino_build_91864/sketch_jan22b.ino.hex:i
     ```
 1. Select the full text of the upload command.
@@ -71,16 +71,16 @@ First, we're going to do a dummy upload in the Arduino IDE in order to get it to
 Next, you need to modify the upload command to write the hex file you read from your other Arduino board:
 1. Start a text editor program.
 1. In the text editor window, press **Ctrl + V**. This will paste the command into the text editor. The end of the command will look something like this:
-    ```
+    ```Batchfile
     -D -Uflash:w:C:\Users\per\AppData\Local\Temp\arduino_build_91864/sketch_jan22b.ino.hex:i
     ```
     That is the part of the command that tells it to write.
 1. Replace the filename in that part of the command with the name of the file you read:
-    ```
+    ```Batchfile
     -Uflash:w:readfile.hex:i
     ```
     So now the full command looks something like this:
-    ```shell
+    ```Batchfile
     E:\Arduino\hardware\tools\avr\bin\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:readfile.hex:i
     ```
 1. If the paths in the command contain spaces, wrap the paths in quotes.
