@@ -24,6 +24,19 @@ Note: for problems with Arduino Create ([Arduino Web Editor](https://create.ardu
 
 
 ---
+#### I don't see the code tags button in the forum editor
+1. Hover the mouse pointer over your avatar in the top right corner of any arduino.cc page.
+1. Click "Profile".
+1. Click "Forum Settings > Edit".
+1. Click the "Settings" tab.
+1. Click "Look and Layout".
+1. Check the box next to "Use full editor in Quick Reply".
+1. Click the "Change profile" button.
+
+After doing that, you will always see the toolbar in the forum editor, which contains the code tags (**</>**) button.
+
+
+---
 #### How do I embed an image in my forum post?
 Please don't post images of text to the Arduino Forum. Post text as text! However, there are times where it is useful to post an image. The best way to do this is to attach the image to the post and then embed the image in the post. Attaching the image to the post rather than uploading it to some external image hosting site avoids the topic suffering bit rot as the image is later deleted from the external site. Embedding the image makes it so that forum members can easily see it without needing to download the file (which many can't or won't do).
 1. Click the "Attachments and other options" at the bottom of the forum post window. If you are making a reply, you must click the "Reply" button before you'll see this link.
