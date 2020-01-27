@@ -145,7 +145,8 @@ Note that the Arduino development software caches compiled files. The cached fil
 
 
 ---
-#### `fork/exec ... : no such file or directory` or `exec: ... : file does not exist`
+<a id="delete-arduino15"></a>
+#### `fork/exec ... : no such file or directory` or `exec: ... : file does not exist` or `Cannot run program "___REMOVE___...`
 This error indicates something has gone wrong with a hardware package installed via Boards Manager. The solution is to remove the installed packages. Be aware this will remove any boards you have installed via Boards Manager:
 1. (In the Arduino IDE) **File > Preferences**
 1. Click the link on the line following "More preferences can be edited directly in the file". This will open the `Arduino15` (or similar name depending on OS) folder.

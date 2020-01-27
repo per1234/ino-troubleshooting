@@ -259,6 +259,11 @@ Sometimes the port gets stuck open. Restarting your computer will resolve that i
 
 
 ---
+#### `Cannot run program "___REMOVE___...`
+See ["fork/exec ... : no such file or directory or exec: ... : file does not exist or Cannot run program "___REMOVE___..."](compiling.md#delete-arduino15)
+
+
+---
 #### `WARNING: invalid value for unused bits in fuse "fuse5"` or `avrdude: jtagmkII_initialize(): Cannot locate "flash" and "boot" memories in description`
 This warning is normal, expected, and doesn't indicate any problem. Please ignore it.
 
