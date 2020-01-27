@@ -176,6 +176,16 @@ Disable browser extensions that might cause interference (e.g., ad or script blo
 
 
 ---
+#### Where is the Arduino Create Plugin for Raspberry Pi or other ARM platforms?
+Arduino doesn't provide a plugin version for the Raspberry Pi. You'll need to compile and install the plugin yourself. You can find instructions here:
+<https://github.com/arduino/arduino-create-agent#development>
+
+There is no installer, so you'll need to do that yourself, including installing the certificates. There's some information about that here:
+<https://forum.arduino.cc/index.php?topic=411290>
+Note that topic is from 2016, so using the pre-compiled plugin @facchinm offers is not recommended, since it's outdated now.
+
+
+---
 ### Arduino Web Editor
 ---
 
