@@ -27,9 +27,9 @@ Start the Arduino IDE from the command line to get some output that may give hel
 ---
 #### Text in the Arduino IDE looks like gibberish
 <!-- https://github.com/arduino/Arduino/pull/9044 -->
-Windows only:
+For Windows only:
 1. Close all Arduino IDE windows.
-1. Open the file arduino.l4j.ini,  located in the Arduino IDE installation folder, in a text editor.
+1. Open the file `arduino.l4j.ini`, located in the Arduino IDE installation folder, in a text editor.
 1. Add this line:
     ```
     -Dawt.useSystemAAFontSettings=on
@@ -101,7 +101,7 @@ If you're using a network proxy, configure it in the "Network" tab of **File > P
 
 After clicking the "Close" button, if you check the contents of the black console window at the bottom of the Arduino IDE window, you will find a detailed error output for the failed download. You will need to scroll up the window to see it all.
 
-If the error is about a URL other than `https://downloads.arduino.cc/packages/package_index.json`, verify that the URL you entered in **File > Preferences > Additional Boards Manager URLs** is correct. If you have multiple URLs in that field, they should be separated by commas.
+If the error is about a URL other than `https://downloads.arduino.cc/packages/package_index.json`, verify that the URL you entered in **File > Preferences > Additional Boards Manager URLs** is correct. Open the URL in your browser to verify it can be accessed. If you have multiple URLs in that field, they should be separated by commas.
 
 
 ---

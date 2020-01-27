@@ -8,7 +8,7 @@ description: Troubleshooting problems with uploading your sketch
 ---
 
 #### Make sure it's actually an upload problem
-The Arduino IDE compiles your code before uploading so a bug in your code will also cause the upload to fail, but that is not considered an upload error. If you do a **Sketch > Verify/Compile** and still get a failure then you need to fix the compilation error before you have any hope of uploading. See the ["Compiling" section of this guide](compiling.md) for help with compilation errors.
+The Arduino IDE compiles your code before uploading, so a bug in your code will also cause the upload to fail. But that is not an upload error. If you do a **Sketch > Verify/Compile** and still get a failure then you need to fix the compilation error before you have any hope of uploading. See the ["Compiling" section of this guide](compiling.md) for help with compilation errors.
 
 
 ---
@@ -81,7 +81,7 @@ If using a MKR board, remove any connections to pins 11 and 12. Many of the MKR 
 
 Remove all external wiring, shields, modules, etc. from your Arduino board to see if it is the cause of the problem.
 
-If you have a native USB board (e.g., Leonardo, Micro, MKR, Nano 33 IoT, Nano 33 BLE), see ["Native USB board doesn't get a port, or is failing uploads](#native-usb-reset).
+If you have a native USB board (e.g., Leonardo, Micro, MKR, Nano 33 IoT, Nano 33 BLE), see ["Native USB board doesn't get a port, or is failing uploads"](#native-usb-reset).
 
 If your board uses the ATmega16U2 USB to TTL serial adapter chip (marked "MEGA16U2" on the top of the chip), and you are using Windows, check Device Manager. If a device called "ATmega16u2 DFU" appears when you plug your board into the computer, this means the Arduino firmware is missing from the ATmega16U2. You can replace it by following these instructions:
 <https://www.arduino.cc/en/Hacking/DFUProgramming8U2>
@@ -179,7 +179,7 @@ If you don't know which port it is, see ["How do I know which port is my Arduino
 
 If the **Tools > Port** menu is grayed or the port of your Arduino does not appear on the menu, see ["The **Tools > Port** menu is grayed out, or the port of my Arduino board doesn't appear in the **Tools > Port** menu, or Arduino Web Editor doesn't recognize my board"](#no-port).
 
-If the correct port is already selected, see ["Native USB board doesn't get a port, or is failing uploads](#native-usb-reset).
+If the correct port is already selected, see ["Native USB board doesn't get a port, or is failing uploads"](#native-usb-reset).
 
 
 ---
@@ -211,7 +211,7 @@ If you don't know which is the port, see ["How do I know which port is my Arduin
 
 If the port of your Arduino does not appear on the menu, see ["The **Tools > Port** menu is grayed out, or the port of my Arduino board doesn't appear in the **Tools > Port** menu, or Arduino Web Editor doesn't recognize my board"](#no-port).
 
-Remove any connections to pins 0 and 1. These pins are used for communication with your computer, including uploads. Connecting anything to these pins can interfere with uploads.
+Remove any connections to pins 0 and 1 on your Arduino board. These pins are used for communication with your computer, including uploads. Connecting anything to these pins can interfere with uploads.
 
 Remove all external wiring, shields, modules, etc. from your Arduino board to see if it is the cause of the problem.
 
@@ -231,7 +231,7 @@ If your board has an ATmega16U2 USB to TTL serial adapter chip (marked "MEGA16U2
 
 If the loopback test failed, the USB to TTL serial adapter is damaged and it's unlikely to be worth repairing your board.
 
-If the loopback test passed, or if you skipped the loopback test. Try doing a Burn Bootloader (see <a href="burn-bootloader.html#burn-bootloader" target="_blank">"How do I burn the bootloader?"</a>).
+If the loopback test passed, or if you skipped the loopback test, try doing a Burn Bootloader (see <a href="burn-bootloader.html#burn-bootloader" target="_blank">"How do I burn the bootloader?"</a>).
 
 If you have problems while burning the bootloader, see the ["Burn Bootloader" troubleshooting page](burn-bootloader.md).
 

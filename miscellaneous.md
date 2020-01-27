@@ -25,7 +25,7 @@ First, we're going to do a dummy upload in the Arduino IDE in order to get it to
 1. Wait for the upload to fail.
 1. Scroll up the black console window at the bottom of the Arduino IDE window until you see the avrdude command that was generated for the upload. It will look something like this:
     ```shell
-    E:\Arduino\hardware\tools\avr\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:C:\Users\per\AppData\Local\Temp\arduino_build_91864/sketch_jan22b.ino.hex:i
+    E:\Arduino\hardware\tools\avr\bin\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:C:\Users\per\AppData\Local\Temp\arduino_build_91864/sketch_jan22b.ino.hex:i
     ```
 1. Select the full text of the upload command.
 1. Press **Ctrl + C**. This will copy the upload command to the clipboard.
@@ -43,7 +43,7 @@ Next, you need to modify the upload command to read the hex file out of your Ard
     ```
     That will cause the read file to be named "readfile.hex", which will be saved to whichever folder you run the command from. So now the full command looks something like this:
     ```shell
-    E:\Arduino\hardware\tools\avr\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:r:readfile.hex:i
+    E:\Arduino\hardware\tools\avr\bin\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:r:readfile.hex:i
     ```
 1. If the paths in the command contain spaces, wrap the paths in quotes.
 1. Plug your Arduino board into your computer.
@@ -63,7 +63,7 @@ First, we're going to do a dummy upload in the Arduino IDE in order to get it to
 1. Wait for the upload to finish.
 1. Scroll up the black console window at the bottom of the Arduino IDE window until you see the avrdude command that was generated for the upload. It will look something like this:
     ```shell
-    E:\Arduino\hardware\tools\avr\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:C:\Users\per\AppData\Local\Temp\arduino_build_91864/sketch_jan22b.ino.hex:i
+    E:\Arduino\hardware\tools\avr\bin\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:C:\Users\per\AppData\Local\Temp\arduino_build_91864/sketch_jan22b.ino.hex:i
     ```
 1. Select the full text of the upload command.
 1. Press **Ctrl + C**. This will copy the upload command to the clipboard.
@@ -81,7 +81,7 @@ Next, you need to modify the upload command to write the hex file you read from 
     ```
     So now the full command looks something like this:
     ```shell
-    E:\Arduino\hardware\tools\avr\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:readfile.hex:i
+    E:\Arduino\hardware\tools\avr\bin\avrdude -CE:\Arduino\hardware\tools\avr/etc/avrdude.conf -v -patmega328p -carduino -PCOM17 -b115200 -D -Uflash:w:readfile.hex:i
     ```
 1. If the paths in the command contain spaces, wrap the paths in quotes.
 1. Plug your Arduino board into your computer.

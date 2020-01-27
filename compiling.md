@@ -13,7 +13,7 @@ When the compilation fails, you will see an error message on the orange bar, but
 
 ---
 #### Warning vs error
-It's important to understand the difference between warnings and errors. A warning is the compiler telling you there is something in the code that could possibly cause a problem, but doesn't cause the compilation to fail. Compiler warnings start with "warning:". An error is a problem that causes compilation to fail. Compiler error start with "error:". It's a good idea to pay attention to warnings as they often provide helpful information. However, warnings don't always indicate a serious problem. When the warning is caused by code in a library, often the best course is to ignore it and carry on.
+It's important to understand the difference between warnings and errors. A warning is the compiler telling you there is something in the code that could possibly cause a problem, but doesn't cause the compilation to fail. Compiler warnings start with "warning:". An error is a problem that causes compilation to fail. Compiler error start with "error:". It's a good idea to pay attention to warnings, as they often provide helpful information. However, warnings don't always indicate a serious problem. When the warning is caused by code in a library, often the best course is to ignore it and carry on.
 
 
 ---
@@ -45,7 +45,7 @@ Often the code you're compiling will come with documentation (either a comment o
 In other cases the author of the code will not have been so kind and you'll need to go on a hunt for the missing library.
 
 A good place to start is the Arduino IDE's Library Manager:
-1. Sketch > Include Library > Manage Libraries...
+1. **Sketch > Include Library > Manage Libraries...**
 1. In the "Filter your search..." box, type some keywords you have gleaned from the missing file name.
 1. Scroll through the results for the right library. Click on it.
 1. Click "Install".
@@ -53,7 +53,12 @@ A good place to start is the Arduino IDE's Library Manager:
 1. Click "Close".
 1. Try compiling your code again.
 
-If you have no luck in Library Manager, then load up your favorite search engine and do a search for the missing filename. You will often get multiple results. If you have a lot of results you might add "arduino" as an additional search keyword. I will usually prefer results on github.com since that is where most Arduino libraries are hosted and downloading from there is fast and easy. In some cases, there will be multiple libraries that contain the given filename and you'll need to do some evaluation to determine which seems the most appropriate, then try it out. After downloading the library you found you'll need to install it. This requires a different process than the Library Manager installation. You will find instructions here: <https://www.arduino.cc/en/Guide/Libraries#toc4>
+If you have no luck in Library Manager, then load up your favorite search engine and do a search for the missing filename. You will often get multiple results. If you have a lot of results you can add "arduino" as an additional search keyword. You might give preference to results on github.com since that is where most Arduino libraries are hosted and downloading from there is fast and easy.
+
+In some cases, there will be multiple libraries that contain the given filename and you'll need to do some evaluation to determine which seems the most appropriate, then try it out.
+
+After downloading the library you found you'll need to install it. This requires a different process than the Library Manager installation. You will find instructions here:
+<https://www.arduino.cc/en/Guide/Libraries#toc4>
 
 
 ---
@@ -139,13 +144,14 @@ Note that the Arduino development software caches compiled files. The cached fil
 
 ---
 #### `fork/exec ... : no such file or directory` or `exec: ... : file does not exist`
-This error indicates you need to take some drastic action. Be aware this will remove any boards you have installed via Boards Manager:
+This error indicates something has gone wrong with a hardware package installed via Boards Manager. The solution is to remove the installed packages. Be aware this will remove any boards you have installed via Boards Manager:
 1. (In the Arduino IDE) **File > Preferences**
 1. Click the link on the line following "More preferences can be edited directly in the file". This will open the `Arduino15` (or similar name depending on OS) folder.
 1. Delete all files and folders under the `Arduino15` folder except for preferences.txt. Please be very careful when deleting things from your computer. When in doubt, back up!
 1. Restart the Arduino IDE
+1. If the board you are using requires Boards Manager (**Tools > Board > Boards Manager**) installation, re-install its hardware package.
 
-Verify that you can now use your board before reinstalling any packages via Boards Manager.
+Verify that you can now use your board before reinstalling any other packages via Boards Manager.
 
 
 ---
@@ -165,7 +171,7 @@ Support for Windows XP was lost in Arduino IDE 1.8.10. Please use Arduino IDE 1.
 
 ---
 #### `'import' does not name a type`
-This is caused by trying to compile a Processing sketch as an Arduino sketch. Arduino sketches sometimes come with companion Processing sketches, and Processing sketches even have the .pde sketch supported for Arduino sketches. However, Processing sketches are program that run on a computer, not an Arduino board, and must be used with the [Processing IDE](https://processing.org/).
+This is caused by trying to compile a Processing sketch as an Arduino sketch. Arduino sketches sometimes come with companion Processing sketches, and Processing sketches even have the `.pde` file extension supported for Arduino sketches. However, Processing sketches are programs that run on a computer, not an Arduino board, and must be used with the [Processing IDE](https://processing.org/).
 
 
 ---
@@ -197,7 +203,7 @@ This error means you're using a version of ArduinoJson library that is not compa
 1. Wait for the download to finish.
 1. In the "Filter your search..." box, type "arduinojson".
 1. In the search results, click on "ArduinoJson by Benoit Blanchon"
-1. From the dropdown version menu, select "5.13.4".
+1. From the dropdown version menu, select "5.13.5".
 1. Click "Install".
 1. Wait for the installation to finish.
 1. Click "Close".

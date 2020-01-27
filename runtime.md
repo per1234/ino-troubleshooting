@@ -9,7 +9,7 @@ description: Troubleshooting problems that occur while your program is running o
 
 #### Turn on warnings and read them to help with troubleshooting
 Compiler warnings can point out problems in your code that would otherwise be difficult to spot, but warnings are disabled by default in the Arduino IDE so you need to turn them on:
-1. File > Preferences
+1. **File > Preferences**
 1. Set "Compiler warnings" to "All".
 1. Uncheck the box next to "Show verbose output during: compilation".
 1. Compile your sketch.
@@ -96,7 +96,7 @@ while(!Serial);
 ```
 The purpose of that code is to cause the program to wait in a loop at that line until Serial Monitor is opened. This way, no serial output is missed. However, if you want your program to run without Serial Monitor open, you must remove that line.
 
-On boards without native USB are not affected by this line.
+Boards without native USB are not affected by this line (`Serial` is always `true`).
 
 
 ---
@@ -110,7 +110,7 @@ If a pin is in `INPUT` mode and not connected to anything, it is "floating". Thi
 ```c++
 pinMode(pin, INPUT_PULLUP);
 ```
-A pull-up resistor means that the pin will read `HIGH` when the button is not pressed. This means you need to wire the button between the pin and ground. When the button is pressed, the pin will read `LOW`. This may seem counterintuitive at first, but remember: [`HIGH` doesn't always mean "on". `LOW` doesn't always mean "off"](#high-low).
+A pull-up resistor means that the pin will read `HIGH` when the button is not pressed. This means you need to wire the button between the pin and ground. When the button is pressed, the pin will read `LOW`. This may seem counterintuitive at first, but remember: [HIGH doesn't always mean "on". LOW doesn't always mean "off"](#high-low).
 
 
 ---
@@ -158,7 +158,7 @@ will evaluate as `true` because `'4'` is the character 4, which is what you sent
 
 ---
 #### Communication using the SoftwareSerial library is not working
-Check the documentation (https://www.arduino.cc/en/Reference/SoftwareSerial) to see if you are using a supported RX pin.
+Check the library's documentation (<https://www.arduino.cc/en/Reference/SoftwareSerial>) to see if you are using an RX pin that is supported for your board.
 
 Don't use high baud rate, as it won't work reliably. It's recommended to start with 9600 baud to be sure of reliable communication.
 
@@ -168,7 +168,7 @@ Don't use high baud rate, as it won't work reliably. It's recommended to start w
 #### My program stopped working on my Nano 33 BLE board and the onboard LED is blinking
 A 3X long, 3X short blink pattern indicates Mbed OS has crashed. The board's port will no longer appear under the **Port** menu (see ["Native USB board doesn't get a port, or is failing uploads"](uploading.md#native-usb-reset)).
 
-Debug information is printed on Serial1 when Mbed OS crashes. You can view the debug output by following these instructions:
+Debug information is printed on `Serial1` when Mbed OS crashes. You can view the debug output by following these instructions:
 1. Unplug your Nano 33 BLE board from the computer or power supply.
 1. Make the following connections between a USB to TTL serial adapter (AKA "FTDI") and your Nano 33 BLE:
 
@@ -228,4 +228,4 @@ Try updating the WiFi module's firmware:
 ---
 #### GSM communication not working on MKR GSM 1400
 <!-- from https://store.arduino.cc/mkr-gsm-1400 -->
-During cellular transmissions, the peak current required by the board will exceed 500 mA. This is in excess of what can be sourced by a standard USB port, so it is MANDATORY to have a 1500 mAh or higher LiPo battery connected to your board all the time. The current provided by the USB port will be supplemented by the battery.  When powering the board via the VIN pin, a 5 V power supply that can supply at least 2 A is required.
+During cellular transmissions, the peak current required by the board will exceed 500 mA. This is in excess of what can be sourced by a standard USB port, so it is mandatory to have a 1500 mAh or higher LiPo battery connected to your board all the time. The current provided by the USB port will be supplemented by the battery. When powering the board via the VIN pin, a 5 V power supply that can supply at least 2 A is required.
