@@ -162,6 +162,18 @@ Scroll up the black console window at the bottom of the Arduino IDE window to se
 
 Note that there is a bug in Arduino IDE 1.8.10 that causes it to display "Multiple libraries were found for" messages even when there were no multiple libraries. You'll know the legitimate "Multiple libraries were found for" messages because they'll show the path to a library that was not used. The false "Multiple libraries were found for" messages only show the path to the library that was used.
 
+Example of a legitimate "Multiple libraries were found for" message:
+```
+Multiple libraries were found for "Servo.h"
+ Used: C:\Users\rachel\Documents\Arduino\libraries\Servo
+ Not used: E:\Arduino\libraries\Servo
+```
+Example of a spurious "Multiple libraries were found for" message:
+```
+Multiple libraries were found for "SPI.h"
+ Used: E:\Arduino\hardware\arduino\avr\libraries\SPI
+```
+
 
 ---
 #### `panic: Failed to find GetFileInformationByHandleEx procedure in kernel32.dll`
