@@ -3,8 +3,10 @@ title: Miscellaneous
 description: Troubleshooting other problems
 ---
 
-#### The LED on my Arduino board is red. What's wrong?
+#### The LED on my Arduino board is red and/or blinking. What's wrong?
 An LED being red doesn't mean it's a signal of a problem. The built-in LEDs on Arduino boards are generally always the same color. They don't change color to red to indicate an issue. Some manufacturers will use different colored LEDs than others.
+
+New Arduino boards often arrive with a program running that blinks the on-board LED. This is not an indication of a problem.
 
 
 ---
