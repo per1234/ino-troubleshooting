@@ -43,6 +43,16 @@ Please don't post images of text to the Arduino Forum. Post text as text! Howeve
 
 
 ---
+#### The clickable links I make using the "Insert a link" button don't work
+<!-- https://forum.arduino.cc/index.php?topic=649599 -->
+When you have the forum editor set in WYSIWYG mode (via **Profile > Forum Settings > Edit > Settings > Look and Layout > Show WYSIWYG editor on post page by default**, clicking the "View source" button on the forum toolbar, or **Ctrl + Shift + s**), the forum software sometimes mangles the URL tags to look something like:
+```
+[iurl="http://\"https://example.com"]example.com[/iurl]
+```
+The solution is to put the forum editor in non-WYSIWYG mode before adding the links.
+
+
+---
 ### Arduino Store
 ---
 
