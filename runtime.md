@@ -87,6 +87,7 @@ You can use the Boolean debug macros to switch on and off other parts of your co
 ### Specific issues
 ---
 
+<a id="while-not-serial"></a>
 #### My program only runs when I have Serial Monitor open
 Boards without native USB capabilities (e.g., Uno, Nano, Mega) are automatically reset when you open Serial Monitor, so you will always see the serial output from the very start of the program. But the native USB boards (e.g., Leonardo, Micro, MKR, Nano 33 IoT, Nano 33 BLE) don't reset when Serial Monitor is opened. This means that any serial output that runs before you open Serial Monitor is never seen.
 
@@ -97,6 +98,22 @@ while(!Serial);
 The purpose of that code is to cause the program to wait in a loop at that line until Serial Monitor is opened. This way, no serial output is missed. However, if you want your program to run without Serial Monitor open, you must remove that line.
 
 Boards without native USB are not affected by this line (`Serial` is always `true`).
+
+
+---
+#### I'm not seeing any output in Serial Monitor
+If you are using a board with native USB capabilities (e.g., Leonardo, Micro, MKR, Nano 33 IoT, Nano 33 BLE), add this line to your sketch before you print any output to `Serial`:
+```c++
+while(!Serial);
+```
+For more information, see ["My program only runs when I have Serial Monitor open"](#while-not-serial).
+
+If you're using a boards without native USB capabilities (e.g., Uno, Nano, Mega), make sure the baud rate menu near the bottom right corner of Serial Monitor is set to the baud rate you set in your [`Serial.begin()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin) call.
+
+
+---
+#### I'm getting gibberish/backwards question marks in Serial Monitor
+If you're using a boards without native USB capabilities (e.g., Uno, Nano, Mega), make sure the baud rate menu near the bottom right corner of Serial Monitor is set to the baud rate you set in your [`Serial.begin()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin) call.
 
 
 ---
