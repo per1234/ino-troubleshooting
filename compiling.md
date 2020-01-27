@@ -27,6 +27,8 @@ A very helpful troubleshooting tool is the Auto Format feature (**Tools > Auto F
 
 Another useful feature of the Arduino IDE/[Arduino Web Editor](https://create.arduino.cc/editor) is that when you place the cursor next to one bracket, it puts a box around the matching bracket. In the Arduino IDE, if the cursor is next to the closing bracket and the opening bracket is off the screen then it will show the opening bracket line in a tool tip after a short delay.
 
+In the Arduino IDE, **Ctrl + {** will cause the cursor to jump from one bracket to its matching bracket.
+
 
 ---
 ### Specific issues
