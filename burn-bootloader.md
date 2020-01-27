@@ -92,7 +92,13 @@ Make sure you uploaded the **File > Examples > 11.ArduinoISP > Arduino ISP** ske
 - This only happens on Windows. On Linux, either programmer selection works.
 - Either programmer selection works on Windows or Linux with a SAMD board as programmer.
 -->
-If you're using an ATmega32U4-based board (e.g., Leonardo, Micro, Pro Micro, Yun) as an "Arduino as ISP" programmer, selected "Arduino as ISP (ATmega32U4)" from the **Tools > Programmer** menu. If you don't see that programmer option in the **Tools > Programmer** menu, use Boards Manager (**Tools > Board > Boards Manager**) to update Arduino AVR Boards.
+If you're using an ATmega32U4-based board (e.g., Leonardo, Micro, Pro Micro, Yun) as an "Arduino as ISP" programmer, select "Arduino as ISP (ATmega32U4)" from the **Tools > Programmer** menu. If you don't see that programmer option in the **Tools > Programmer** menu, you need to update Arduino AVR Boards, following these instructions:
+1. **Tools > Board > Boards Manager**
+1. Wait for the downloads to finish.
+1. Click on "Arduino AVR Boards".
+1. Click the "Update" button.
+1. Wait for the update to finish.
+1. Click the "Close" button.
 
 
 ---
@@ -103,7 +109,13 @@ The "Arduino as ISP programmer's protocol was changed from `stk500v1` to `arduin
 I can only reproduce this on Linux. On Windows, the "arduino" and "stk500v1" protocols both work (tested with Uno w/ CH340 and Mega w/ ATmega16U2).
 The "Arduino as ISP" programmer's protocol was changed back to `stk500v1` in Arduino AVR Boards 1.8.1 (https://github.com/arduino/ArduinoCore-avr/pull/56), and an "Arduino as ISP (ATmega32U4)" programmer was added with the `arduino` protocol.
 -->
-Make sure you're using Arduino AVR Boards 1.8.1 or newer. You can check the Arduino AVR Boards version and upgrade if necessary in Boards Manager (**Tools > Board > Boards Manager**).
+Make sure you're using Arduino AVR Boards 1.8.1 or newer. You can check the Arduino AVR Boards version and upgrade if necessary by following these instructions:
+1. **Tools > Board > Boards Manager**
+1. Wait for the download to finish.
+1. Click on "Arduino AVR Boards".
+1. Click the "Update" button.
+1. Wait for the update to finish.
+1. Click the "Close" button.
 
 If the problem still occurs with Arduino AVR Boards 1.8.1 or newer, connect a 10 uF capacitor between the GND and RST pins on the "Arduino as ISP" programmer board.
 
