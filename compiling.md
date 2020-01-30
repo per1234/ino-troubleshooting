@@ -185,6 +185,24 @@ Support for Windows XP was lost in Arduino IDE 1.8.10. Please use Arduino IDE 1.
 
 
 ---
+#### `avr-g++: error: device-specs/specs-...: No such file or directory`
+<!-- https://forum.arduino.cc/index.php?topic=627042.msg4256780#msg4256780 -->
+1. **Win + r**
+1. Type "sysdm.cpl".
+1. Click the "OK" button. "System Properties" should now open.
+1. Click the "Advanced" tab.
+1. Click the "Environment variables..." button.
+1. Under "System variables", scroll down until you see "GCC_EXEC_PREFIX". Click on it.
+1. Click the "Delete" button.
+1. Click the "OK" button.
+1. Close System Properties.
+
+{:refdef: style="text-align: center"}
+![GCC_EXEC_PREFIX environment variable](images/GCC_EXEC_PREFIX.png)
+{: refdef}
+
+
+---
 #### `'import' does not name a type`
 This is caused by trying to compile a Processing sketch as an Arduino sketch. Arduino sketches sometimes come with companion Processing sketches, and Processing sketches even have the `.pde` file extension supported for Arduino sketches. However, Processing sketches are programs that run on a computer, not an Arduino board, and must be used with the [Processing IDE](https://processing.org/).
 
