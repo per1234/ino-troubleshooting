@@ -35,6 +35,10 @@ Note: for problems with Arduino Create ([Arduino Web Editor](https://create.ardu
 
 After doing that, you will always see the toolbar in the forum editor, which contains the code tags (**</>**) button.
 
+{:refdef: style="text-align: center"}
+![Code tags button](images/code-tags.png)
+{: refdef}
+
 
 ---
 #### How do I embed an image in my forum post?
