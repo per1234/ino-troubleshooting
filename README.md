@@ -1,4 +1,4 @@
-# Troubleshooting guide Arduino
+# Troubleshooting guide for Arduino
 
 The troubleshooting guide is published here: https://per1234.github.io/ino-troubleshooting
 
