@@ -210,9 +210,11 @@ Debug information is printed on `Serial1` when Mbed OS crashes. You can view the
  -->
 1. Upload a sketch that uses the Keyboard or Mouse library to your Arduino board.
 1. Open Windows Device Manager.
-1. Under the "Ports" tree, you should see your Arduino board listed twice. One of these will have a yellow triangle. Right click on that one.
+1. Under the "Ports" tree, you should see your Arduino board listed with a yellow triangle. Right click on it.
+1. Check the box next to "Delete the driver software for this device".
 1. Click "Uninstall Device".
-1. Repeat the above steps until it no longer shows the yellow triangle.
+1. Unplug the Arduino board's USB cable.
+1. Plug the Arduino board's USB cable back in.
 
 Keyboard and mouse emulation should now start working.
 
