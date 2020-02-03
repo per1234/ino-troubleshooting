@@ -188,7 +188,7 @@ If the correct port is already selected, see ["Native USB board doesn't get a po
 
 
 ---
-#### `avrdude: stk500_recv(): programmer is not responding` or `avrdude: stk500_getsync() attempt ...: not in sync` or `avrdude: stk500v2_getsync(): timeout communicating with programmer`
+#### `avrdude: stk500_recv(): programmer is not responding`, `avrdude: stk500_getsync() attempt ...: not in sync` or `avrdude: stk500v2_ReceiveMessage(): timeout`, `avrdude: stk500v2_getsync(): timeout communicating with programmer`
 <!--
 Upload to wrong port:
 - Uno:
