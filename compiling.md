@@ -147,7 +147,9 @@ Note that the Arduino development software caches compiled files. The cached fil
 ---
 <a id="delete-arduino15"></a>
 #### `fork/exec ... : no such file or directory` or `exec: ... : file does not exist` or `Cannot run program "___REMOVE___...`
-This error indicates something has gone wrong with a hardware package installed via Boards Manager. The solution is to remove the installed packages. Be aware this will remove any boards you have installed via Boards Manager:
+Some hardware packages have dependencies on other packages. For example, Adafruit SAMD Boards requires that Arduino SAMD Boards also be installed. Attempting to compile for a board of a hardware package without the package dependency installed can cause this error. Check the installation instructions for the hardware package of the board you're compiling for to see if there are any dependencies.
+
+Otherwise, this error indicates something has gone wrong with a hardware package installed via Boards Manager. The solution is to remove the installed packages. Be aware this will remove any boards you have installed via Boards Manager:
 1. (In the Arduino IDE) **File > Preferences**
 1. Click the link on the line following "More preferences can be edited directly in the file". This will open the `Arduino15` (or similar name depending on OS) folder.
 1. Delete all files and folders under the `Arduino15` folder except for preferences.txt. Please be very careful when deleting things from your computer. When in doubt, back up!
