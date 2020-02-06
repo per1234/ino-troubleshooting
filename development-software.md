@@ -166,13 +166,37 @@ You can determine the option name and values by checking boards.txt, or examinin
 ---
 
 #### General troubleshooting advice
-Log out of your Arduino account and log in again.
+Try opening the site in an incognito window:
+- If using the Google Chrome browser
+1. Click the button with the three vertical dots at the top right corner of Chrome.
+1. Click "New incognito window".
+1. Open <https://create.arduino.cc/>
+- If using the Firefox browser
+1. File > New Private Window
+1. Open <https://create.arduino.cc/>
 
-Clear your browser cache.
+Does that fix the problem? If so, to use Arduino Create in a regular window, try this:
 
-Try using a "private" or "incognito" window in your browser.
+1. Log out of your Arduino account:
+  1. Click your profile picture at the top right of any arduino.cc window.
+  1. Click "Sign out".
+1. Clear the browser cache:
+  - If using the Google Chrome browser
+    1. Click the button with the three vertical dots at the top right corner of Chrome.
+    1. Click "History".
+    1. Click "History".
+    1. From the menu on the left side of the browser window, click "Clear browsing data".
+    1. Uncheck all boxes except the one to the left of "Cached images and files", which you should check.
+    1. Click the "Clear data" button.
+  - If using the Firefox browser
+    1. **History > Clear Recent History...**
+    1. Uncheck all boxes except the one to the left of "Cache", which you should check.
+    1. Click the "Clear Now" button.
+1. Sign in to your Arduino account:
+  1. Open https://create.arduino.cc/
+  1. At the top right corner of the Arduino Create page, click "Sign in".
 
-Disable browser extensions that might cause interference (e.g., ad or script blockers).
+If the problem persists after that, it might be caused by a browser extension. Disable browser extensions that might cause interference (e.g., ad or script blockers).
 
 
 ---
