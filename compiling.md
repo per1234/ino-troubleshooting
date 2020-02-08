@@ -92,6 +92,11 @@ Use of the [`String`](https://www.arduino.cc/reference/en/language/variables/dat
 
 
 ---
+#### `undefined reference to `setup'` or `undefined reference to `loop'`
+Every Arduino sketch must contain a `setup` and a `loop` function. Even if you don't want to put any code in one of the functions, you still must have the empty function definition.
+
+
+---
 #### `lto1.exe: internal compiler error: Segmentation fault`
 This bug is specific to the 5.4.0-atmel3.6.1-arduino2 version of avr-gcc used by Arduino AVR Boards 1.6.22 and 1.6.23. The solution is to update to the latest version of Arduino AVR Boards:
 1. **Tools > Board > Boards Manager**
