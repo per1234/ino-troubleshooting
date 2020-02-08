@@ -138,7 +138,7 @@ The **Tools > Programmer** menu selection is only used when you are doing **Tool
 
 
 ---
-#### `avrdude: ser_open(): can't open device ...: The system cannot find the file specified.` or `Couldn't find a Board on the selected port` or `the selected serial port does not exist or your board is not connected`
+#### `avrdude: ser_open(): can't open device ...: The system cannot find the file specified.` or `Couldn't find a Board on the selected port` or `the selected serial port does not exist or your board is not connected` or `avrdude: usbhid_open(): No device found` or `avrdude: jtag3_open_common(): Did not find any device matching VID 0x03eb and PID list: 0x2145` or `avrdude: jtagmkII_recv_frame(): timeout` or `avrdude: jtagmkII_getsync(): sign-on command: status -1`
 <!--
 Upload to non-existent port:
 - Uno: avrdude: `ser_open(): can't open device "\\.\COM10": The system cannot find the file specified.`
