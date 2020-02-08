@@ -39,7 +39,7 @@ Arduino IDE:
 1. Unplug your Arduino board from the computer.
 1. **Tools > Port**
 1. Note the ports, if any, listed in the menu.
-1. Close the **Tools** menu.
+1. Close the **Tools** menu. The ports list is only updated when the **Tools** menu is re-opened, so this step is essential.
 1. Plug your Arduino board into the computer.
 1. **Tools > Port** - The new port listed in the menu is your Arduino board.
 
