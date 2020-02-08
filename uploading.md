@@ -274,6 +274,24 @@ This warning is normal, expected, and doesn't indicate any problem. Please ignor
 
 
 ---
+#### My keyboard or mouse emulation sketch is out of control, so I can't upload a new sketch
+1. Unplug your Arduino board from your computer.
+1. Open the sketch you want to upload.
+1. Select the appropriate board from the **Tools > Board** menu.
+1. Hold down the reset button on your Arduino board. If you have a Pro Micro, there is no reset button, so you'll need to use a wire to connect the GND and RST pins.
+1. Plug your Arduino board's USB cable into your computer.
+1. **Sketch > Upload**
+1. Watch the black console window at the bottom of the Arduino IDE window. When you see something like this:
+    ```
+    Sketch uses 3462 bytes (12%) of program storage space. Maximum is 28672 bytes.
+    Global variables use 149 bytes (5%) of dynamic memory, leaving 2411 bytes for local variables. Maximum is 2560 bytes.
+    ```
+    release the reset button (or disconnect the wire between the RST and GND pins on the Pro Micro).
+
+The upload should now complete successfully.
+
+
+---
 #### `SAM-BA operation failed`
 If you are using a MKR Vidor 4000, update the bootloader following these instructions: <https://forum.arduino.cc/index.php?topic=563513.msg3839894#msg3839894>
 
