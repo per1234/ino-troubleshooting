@@ -243,6 +243,16 @@ If you are using the G Suite for Education, you are required to use one of the e
 ### Arduino IoT Cloud
 ---
 
+#### General troubleshooting advice for adding a board
+Check the output in the Arduino Create Debug Console:
+1. In your system tray (AKA "notification area" on Windows), click the Arduino logo.
+1. Click "Open debug console". This should open the Arduino Create Agent Debug Console in your browser.
+1. Uncheck the box next to "Toggle List". This suppresses some unhelpful output that will only make it harder to find the useful information.
+1. Leaving the Arduino Create Agent Debug Console browser tab open, attempt to add a new board via Arduino Create.
+1. Once the process fails, switch to the Arduino Create Agent Debug Console browser tab and examine the output for clues to the cause of the failure.
+
+
+---
 #### `UNABLE TO CONNECT`, `We could not find any board.`
 The supported boards for [Arduino IoT Cloud](https://www.arduino.cc/en/IoT/HomePage) are shown in the "Setup an IoT Board" section of this page:
 <https://create.arduino.cc/getting-started/>
