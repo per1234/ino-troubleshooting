@@ -186,6 +186,15 @@ Multiple libraries were found for "SPI.h"
 
 
 ---
+#### `undefined reference to ...`
+This error is often caused by only installing the .h file of a library. You must install the entire library.
+
+To learn how to download the entire library from GitHub, see [How do I download a library from GitHub?](miscellaneous.md#download-from-github).
+
+To learn how to install Arduino libraries, see <https://www.arduino.cc/en/guide/libraries>.
+
+
+---
 #### `panic: Failed to find GetFileInformationByHandleEx procedure in kernel32.dll`
 Support for Windows XP was lost in Arduino IDE 1.8.10. Please use Arduino IDE 1.8.9 with Windows XP. You can download Arduino IDE 1.8.9 here:
 <https://www.arduino.cc/en/Main/OldSoftwareReleases>
