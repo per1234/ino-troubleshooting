@@ -225,6 +225,18 @@ Unlike the Arduino IDE, [Arduino Web Editor](https://create.arduino.cc/editor) r
 1. Try the import again in [Arduino Web Editor](https://create.arduino.cc/editor).
 
 
+#### How do I make Arduino Web Editor use a specific version of a library?
+1. From the menu on the left side of the Arduino Web Editor window, click "Libraries".
+2. Click the "Library Manager" button.
+3. In the "Search Library" field, type the name of the library you want to specify the version of.
+4. Click the star to the right of the library name, so that it is colored in.
+5. Click the "Done" button.
+6. Click the "Favorites" tab.
+7. In the list of favorites, hover your mouse over the name of the library.
+8. Click the downward facing triangle on the right side of the "Include" button.
+9. From the dropdown menu, select the version number you want to use. This will cause the sketch you currently have open in Arduino Web Editor to use that version of the library.
+
+
 ---
 #### Arduino IDE as an alternative
 If you can't get the [Arduino Web Editor](https://create.arduino.cc/editor) working, an alternative is to use the Arduino IDE.
