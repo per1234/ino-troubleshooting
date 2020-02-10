@@ -9,6 +9,14 @@ An LED being red doesn't mean it's a signal of a problem. The built-in LEDs on A
 New Arduino boards often arrive with a program running that blinks the onboard LED. This is not an indication of a problem.
 
 
+<a id="download-from-github"></a>
+---
+### How do I download a library from GitHub?
+1. Navigate to the home page of the repository by clicking on the repository name at the top of the page. For example, it might say **foo/Bar** (meaning the repository owner is **foo** and the repository name is **Bar**), then you would click the **Bar** link.
+1. Click the "Clone or Download" button.
+1. Click the "Download ZIP" button.
+
+
 ---
 #### How can I download my sketch from my Arduino board?
 While it is possible to download the compiled program from the Arduino board, it is not possible to recover your original sketch from that file. You could get the assembly language listing from the compiled program, but this will have no resemblance to your sketch. It would be faster to just write your sketch all over again than to convert the assembly back into a standard Arduino sketch.

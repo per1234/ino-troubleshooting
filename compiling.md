@@ -55,7 +55,7 @@ A good place to start is the Arduino IDE's Library Manager:
 1. Click "Close".
 1. Try compiling your code again.
 
-If you have no luck in Library Manager, then load up your favorite search engine and do a search for the missing filename. You will often get multiple results. If you have a lot of results you can add "arduino" as an additional search keyword. You might give preference to results on github.com since that is where most Arduino libraries are hosted and downloading from there is fast and easy.
+If you have no luck in Library Manager, then load up your favorite search engine and do a search for the missing filename. You will often get multiple results. If you have a lot of results you can add "arduino" as an additional search keyword. You might give preference to results on github.com since that is where most Arduino libraries are hosted and downloading from there is fast and easy (see [How do I download a library from GitHub?](miscellaneous.md#download-from-github)).
 
 In some cases, there will be multiple libraries that contain the given filename and you'll need to do some evaluation to determine which seems the most appropriate, then try it out.
 
