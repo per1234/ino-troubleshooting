@@ -225,6 +225,7 @@ Unlike the Arduino IDE, [Arduino Web Editor](https://create.arduino.cc/editor) r
 1. Try the import again in [Arduino Web Editor](https://create.arduino.cc/editor).
 
 
+---
 #### How do I make Arduino Web Editor use a specific version of a library?
 1. From the menu on the left side of the Arduino Web Editor window, click "Libraries".
 2. Click the "Library Manager" button.
@@ -235,6 +236,18 @@ Unlike the Arduino IDE, [Arduino Web Editor](https://create.arduino.cc/editor) r
 7. In the list of favorites, hover your mouse over the name of the library.
 8. Click the downward facing triangle on the right side of the "Include" button.
 9. From the dropdown menu, select the version number you want to use. This will cause the sketch you currently have open in Arduino Web Editor to use that version of the library.
+
+
+---
+#### Arduino Web Editor is using the wrong library
+Every one of the thousands of libraries in the Arduino Library Manager index come pre-installed in the Arduino Web Editor. This is very convenient, but it also means that for any common file name you use in an `#include` directive, there will often be multiple libraries that contain a file of that name. When this occurs, Arduino Web Editor attempts to automatically pick the best library, but doesn't always get it right. Fortunately, libraries you import will be given preference over the pre-installed libraries. So the solution is to import the library you want to use:
+1. Download the library you want to use. If the library is on GitHub and you don't know how to download it, see [How do I download a library from GitHub?](miscellaneous.md#download-from-github)
+1. From the menu on the left side of the Arduino Web Editor window, click "Libraries".
+1. Click the upward pointing arrow button (Import).
+1. If you get a pop up about importing your sketchbook, click "Import".
+1. Select the downloaded library file.
+1. Click the "Open" button.
+1. Wait for Arduino Web Editor to indicate the library has been successfully imported.
 
 
 ---
