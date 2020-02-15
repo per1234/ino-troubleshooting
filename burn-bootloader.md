@@ -3,17 +3,19 @@ title: Burn Bootloader
 description: Troubleshooting problems with burning the bootloader to your Arduino board
 ---
 
+Note: Only the Arduino IDE has **Burn Bootloader** functionality. It is not possible to do this via [Arduino Web Editor](https://create.arduino.cc/editor) or [arduino-cli](https://github.com/arduino/arduino-cli).
+
 ---
 ### General troubleshooting advice
 ---
 
 <a id="burn-bootloader"></a>
-#### How do I burn the bootloader?
-Only the Arduino IDE has **Burn Bootloader** functionality. It is not possible to do this via [Arduino Web Editor](https://create.arduino.cc/editor) or [arduino-cli](https://github.com/arduino/arduino-cli).
+#### How do I burn the bootloader to my AVR board?
+The following instructions are for targets that use the AVR architecture (e.g., Uno, Nano, Leonardo, Mega).
 
-The following instructions only apply to AVR architecture targets.
+You will need an ISP programmer. If you don't have a programmer, you can use a spare Arduino board as an "Arduino as ISP" programmer. Although the "Arduino as ISP" only works for programming targets of the AVR architecture, you can use boards of any architecture as an "Arduino as ISP" programmer.
 
-You will need an ISP programmer. If you don't have a programmer, you can use a spare Arduino board as an "Arduino as ISP" programmer. Although the "Arduino as ISP" only works for programming targets of the AVR architecture, you can use boards of any architecture as an "Arduino as ISP" programmer. Instructions:
+Instructions:
 1. Make the following connections between the Arduino board you will be using as the programmer and the target. Refer to the "Connections" table on the [SPI library reference page](https://www.arduino.cc/en/Reference/SPI) to determine the pins:
 
     Programmer | Target
@@ -41,6 +43,95 @@ Instructions for burning the bootloader:
 1. Wait for the process to finish successfully.
 
 You can also use your ISP programmer to upload sketches to the target board via **Sketch > Upload Using Programmer**. Note that when you do this, the bootloader is erased. After using **Upload Using Programmer**, you would need to do another **Burn Bootloader** before you can go back to uploading to the target board normally via the USB cable.
+
+
+---
+#### How do I burn the bootloader to my MKR or Nano 33 IoT board?
+You'll need:
+- An extra Arduino board that runs at 3.3 V.
+  - It is possible to use an Arduino board that runs at 5 V as the programmer, but you'll need to use level shifting circuitry on the programming lines to avoid exposing the target board to 5 V logic levels, which would damage it.
+- An SD slot. This could be built into your Arduino board (e.g., [MKR Zero](https://store.arduino.cc/arduino-mkr-zero-i2s-bus-sd-for-sound-music-digital-audio-data)), a shield (e.g., [MKR SD Proto Shield](https://store.arduino.cc/mkr-sd-proto-shield)), or one of the common SD modules.
+- An SD card that fits your SD slot.
+- A way to connect the SD card to your computer.
+- A way to make the connections to the SWD pins on your target Arduino board:
+  - MKR1000: The SWD header is a 0.05" pitch 2x5 male header on the top of the board.
+    - You will need an adapter, something like [this one](https://www.aliexpress.com/item/32924937649.html).
+  - Other MKR boards and Nano 33 IoT: The SWD header is a 2x3 footprint or test pads on the bottom of the board.
+    - You can use a 0.1" pitch 2x3 POGO adapter like [this one](https://www.sparkfun.com/products/11591).
+    - You can solder wires to the test points.
+    - On the MKR boards, it is the footprint for a 0.1" pitch SMD header (e.g., <https://www.digikey.com/short/z3dvdv>).
+
+Instructions:
+1. Connect an SD card to your computer.
+1. Open this link in your browser: <https://github.com/arduino/ArduinoCore-samd/tree/master/bootloaders>
+1. Click the folder that matches the name of your target board.
+1. Click the file that ends in `.bin`
+1. Click the "Download" button.
+1. Rename the downloaded file to `fw.bin`
+1. Move `fw.bin` to the SD card.
+1. Eject the SD card from your computer.
+1. Plug the USB cable of the Arduino board you will be using as a programmer into your computer.
+1. (In the Arduino IDE) **Sketch > Include Library > Manage Libraries**
+1. Wait for the download to finish.
+1. In the "Filter your search..." field, type "Adafruit DAP library".
+1. Press "Enter".
+1. Click on "Adafruit DAP library by Adafruit".
+1. Click the "Install" button.
+1. Wait for the installation to finish.
+1. Click the "Close" button.
+1. **File > Examples > Adafruit DAP library > flash_from_SD**
+1. Change this line:
+    ```c++
+    #define SD_CS 4
+    ```
+    according to the Arduino pin connected to the SD CS pin. If your board has a built-in SD slot (e.g., MKR Zero), then you can change this line:
+    ```c++
+    if (!SD.begin(SD_CS)) {
+    ```
+    to:
+    ```c++
+    if (!SD.begin()) {
+    ```
+1. Select the correct board from the **Tools > Board** menu.
+1. Select the correct port from the **Tools > Port** menu.
+1. **Sketch > Upload**
+1. Wait for the upload to finish successfully.
+1. Unplug the programmer Arduino board from your computer.
+1. Plug the SD card into the SD slot connected to your Arduino board.
+1. Connect the programmer Arduino board to the target Arduino board (see pinout diagrams below) as follows:
+
+    Programmer | Target
+    ---|---
+    VCC | +3V3
+    10 | SWDIO
+    9 | SWCLK
+    GND | GND
+    11 | RESETN
+
+1. Plug the USB cable of the programmer Arduino board into your computer.
+1. Tools > Serial Monitor. You should now see the target board detected, and the bootloader file flashed to it successfully.
+1. Unplug the programmer Arduino board from your computer.
+1. Disconnect the programmer Arduino board from the target Arduino board.
+
+Note: another alternative is to use a J-Link debug probe (J-Link EDU Mini and J-Link clones are available for a low price) with the Adalink software:
+<https://github.com/adafruit/Adafruit_Adalink>
+
+SWD pinout diagrams:
+
+MKR boards other than MKR 1000
+{:refdef: style="text-align: center"}
+![Code tags button](images/MKR-Zero-SWD.jpg)
+{: refdef}
+
+MKR 1000
+{:refdef: style="text-align: center"}
+![Code tags button](images/MKR-1000-SWD.jpg)
+{: refdef}
+
+Nano 33 IoT
+{:refdef: style="text-align: center"}
+![Code tags button](images/Nano-33-IoT-SWD.jpg)
+{: refdef}
 
 
 ---
