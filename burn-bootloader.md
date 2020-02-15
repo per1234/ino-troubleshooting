@@ -135,6 +135,16 @@ Nano 33 IoT
 
 
 ---
+#### How do I burn the bootloader to my Arduino Zero?
+The Zero has a built-in programmer, which makes burning the bootloader very easy.
+1. Connect a USB cable to the "Programming Port" of the Zero.
+1. Plug the USB cable of the Zero into your computer.
+1. **Tools > Board > Arduino Zero (Programming Port)**
+1. **Tools > Programmer > Atmel EDBG**
+1. **Tools > Burn Bootloader**. The Burn Bootloader process should now proceed successfully.
+
+
+---
 #### Verbose output during **Burn Bootloader**
 If the **Burn Bootloader** process is failing, it can be very helpful to check the verbose output to see what the problem is:
 1. **File > Preferences**
