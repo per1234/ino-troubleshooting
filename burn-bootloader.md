@@ -67,6 +67,7 @@ You'll need:
   - Other MKR boards and Nano 33 IoT: The SWD header is a 2x3 footprint or test pads on the bottom of the board.
     - You can use a 0.1" pitch 2x3 POGO adapter like [this one](https://www.sparkfun.com/products/11591).
     - You can solder wires to the test points.
+    <!-- markdown-link-check-disable-next-line -->
     - On the MKR boards, it is the footprint for a 0.1" pitch SMD header (e.g., <https://www.digikey.com/short/z3dvdv>).
 
 Instructions:
