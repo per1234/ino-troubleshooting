@@ -68,7 +68,7 @@ Some Arduino boards come with their pins inserted into anti-static foam. This fo
 You may need to install the driver for the USB to TTL serial adapter chip on your Arduino. Common USB chips:
 - Microchip ATmega16U2 (marked "MEGA16U2") or ATmega8U2 (marked "MEGA8U2"): The driver is included with the Arduino IDE in the drivers subfolder of the Arduino IDE.
 - FTDI FT232 (marked "FT232..."): The driver is included with the Arduino IDE in the drivers subfolder of the Arduino IDE.
-- WCH CH340 (marked "CH340G", the most common chip on derivative boards): <http://www.wch.cn/download/CH341SER_EXE.html>
+- WCH CH340 (marked "CH340G", the most common chip on derivative boards): <https://web.archive.org/web/20210119102158/http://www.wch.cn/downloads/file/65.html>
 - Silicon Labs CP210x (e.g. CP2102 or CP2104): <http://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers>
 - Prolific PL2303 (marked "PL-2303..."): <http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41>
 
