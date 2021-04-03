@@ -89,7 +89,7 @@ You can use the Boolean debug macros to switch on and off other parts of your co
 
 <a id="while-not-serial"></a>
 #### My program only runs when I have Serial Monitor open
-Boards without native USB capabilities (e.g., Uno, Nano, Mega) are automatically reset when you open Serial Monitor, so you will always see the serial output from the very start of the program. But the native USB boards (e.g., Leonardo, Micro, MKR, Nano 33 IoT, Nano 33 BLE) don't reset when Serial Monitor is opened. This means that any serial output that runs before you open Serial Monitor is never seen.
+Boards without native USB capabilities (e.g., Uno, classic Nano, Mega) are automatically reset when you open Serial Monitor, so you will always see the serial output from the very start of the program. But the native USB boards (e.g., Leonardo, Micro, MKR, Nano 33 IoT, Nano 33 BLE) don't reset when Serial Monitor is opened. This means that any serial output that runs before you open Serial Monitor is never seen.
 
 This is why it's common to see a line like this in Arduino sketches:
 ```c++
@@ -108,12 +108,12 @@ while(!Serial);
 ```
 For more information, see ["My program only runs when I have Serial Monitor open"](#while-not-serial).
 
-If you're using a boards without native USB capabilities (e.g., Uno, Nano, Mega), make sure the baud rate menu near the bottom right corner of Serial Monitor is set to the baud rate you set in your [`Serial.begin()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin) call.
+If you're using a boards without native USB capabilities (e.g., Uno, classic Nano, Mega), make sure the baud rate menu near the bottom right corner of Serial Monitor is set to the baud rate you set in your [`Serial.begin()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin) call.
 
 
 ---
 #### I'm getting gibberish/backwards question marks in Serial Monitor
-If you're using a boards without native USB capabilities (e.g., Uno, Nano, Mega), make sure the baud rate menu near the bottom right corner of Serial Monitor is set to the baud rate you set in your [`Serial.begin()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin) call.
+If you're using a boards without native USB capabilities (e.g., Uno, classic Nano, Mega), make sure the baud rate menu near the bottom right corner of Serial Monitor is set to the baud rate you set in your [`Serial.begin()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin) call.
 
 
 ---
