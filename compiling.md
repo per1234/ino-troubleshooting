@@ -105,7 +105,7 @@ Use of the [`String`](https://www.arduino.cc/reference/en/language/variables/dat
 
 ---
 
-#### `undefined reference to `setup'`or`undefined reference to `loop'`
+#### `undefined reference to 'setup'` or `undefined reference to 'loop'`
 
 Every Arduino sketch must contain a `setup` and a `loop` function. Even if you don't want to put any code in one of the functions, you still must have the empty function definition.
 

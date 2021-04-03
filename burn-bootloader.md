@@ -271,7 +271,7 @@ Although AVRDUDE suggests overriding the signature check via the `-F` command li
 
 ---
 
-#### `avrdude: error: program enable: target doesn't answer. 0 `, `avrdude: initialization failed, rc=-1`
+#### `avrdude: error: program enable: target doesn't answer. 0`, `avrdude: initialization failed, rc=-1`
 
 <!-- https://github.com/arduino/avrdude-build-script/issues/1 -->
 
