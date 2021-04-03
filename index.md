@@ -4,6 +4,7 @@ description: Table of contents
 ---
 
 This guide is organized into several main categories:
+
 - [General](general.md): General troubleshooting advice
 - [Development Software](development-software.md): Problems with the Arduino IDE, arduino-cli, Arduino Pro IDE, Arduino Web Editor, or Arduino IoT Cloud
 - [Compiling](compiling.md): Problems with verifying your sketch

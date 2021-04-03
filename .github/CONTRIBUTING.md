@@ -1,13 +1,16 @@
 # Contribution Rules
+
 Thanks for your interest in contributing to this free open source project! Please take the time to read and follow these rules before submitting an issue report or pull request.
 
 ## Issues
+
 - Do you need help? Support requests should be made to the appropriate section of the [Arduino forum](https://forum.arduino.cc) rather than an issue report. Feel free to [send me a PM](https://forum.arduino.cc/index.php?action=pm;sa=send;u=224903) with a link to your forum thread. **Support will not be provided via PM**, I prefer to help you publicly so that others with the same question may benefit from the information. **Issue reports are to be used only to report errors or suggest improvements.**
 - Search [existing pull requests and issues](https://github.com/per1234/arduino-ci-script/issues?q=) to be sure it hasn't already been reported. **Do not submit duplicate issue reports.** If you have additional information to provide about the issue then please comment on that issue.
 - Open an issue at https://github.com/per1234/arduino-ci-script/issues/new.
 - Be responsive. I may need you to provide more information, please respond as soon as possible.
 
 ## Pull Requests
+
 - Search [existing pull requests and issues](https://github.com/per1234/arduino-ci-script/pulls?q=) to make sure the change hasn't already been proposed.
 - Follow the formatting conventions used throughout the rest of the project. Remove all trailing whitespace. The content is written in [Markdown](https://guides.github.com/features/mastering-markdown/)
 - **All commits must be atomic**. This means that the commit completely accomplishes a single task. Each commit should result in fully functional code. Multiple tasks should not be combined in a single commit. For more information please read <https://www.freshconsulting.com/atomic-commits>.
