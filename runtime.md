@@ -161,7 +161,7 @@ A pull-up resistor means that the pin will read `HIGH` when the button is not pr
 
 #### A variable is not holding the value it was set to
 
-You can declare multiple variables of the same name at different [scopes](https://www.arduino.cc/reference/en/language/variables/variable-scope--qualifiers/scope/). For example:
+You can declare multiple variables of the same name at different [scopes](https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/scope/). For example:
 
 ```c++
 byte foo = 6; // a global variable named foo
@@ -189,7 +189,7 @@ and a variable definition:
 foo = 42;
 ```
 
-A local variable holds its value only while it is in [scope](https://www.arduino.cc/reference/en/language/variables/variable-scope--qualifiers/scope/). If you want a variable to retain the same value it was set to each time the function runs, you need to make it a global or declare it [static](https://www.arduino.cc/reference/en/language/variables/variable-scope--qualifiers/static/).
+A local variable holds its value only while it is in [scope](https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/scope/). If you want a variable to retain the same value it was set to each time the function runs, you need to make it a global or declare it [static](https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/static/).
 
 ---
 

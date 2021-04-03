@@ -175,7 +175,7 @@ If the **Burn Bootloader** process is failing, it can be very helpful to check t
 1. **File > Preferences**
 1. Check the box next to "Show verbose output during: > upload".
 1. Click the "OK" button.
-1. Do the [**Burn Bootloader**](*burn-bootloader).
+1. Do the [**Burn Bootloader**](#burn-bootloader).
 1. After the process fails, check the output in the black console window at the bottom of the Arduino IDE window. You may need to scroll up to see it all.
 
 ---
